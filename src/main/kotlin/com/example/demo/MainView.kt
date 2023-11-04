@@ -17,8 +17,6 @@ import software.xdev.vaadin.maps.leaflet.basictypes.LLatLng
 import software.xdev.vaadin.maps.leaflet.basictypes.LPoint
 import software.xdev.vaadin.maps.leaflet.layer.raster.LTileLayer
 import software.xdev.vaadin.maps.leaflet.layer.ui.LMarker
-import software.xdev.vaadin.maps.leaflet.layer.vector.LCircleMarker
-import software.xdev.vaadin.maps.leaflet.layer.vector.LCircleMarkerOptions
 import software.xdev.vaadin.maps.leaflet.layer.vector.LPolygon
 import software.xdev.vaadin.maps.leaflet.registry.LComponentManagementRegistry
 import software.xdev.vaadin.maps.leaflet.registry.LDefaultComponentManagementRegistry
@@ -63,9 +61,9 @@ class MainView : HorizontalLayout() {
     init {
         add(mapContainer)
         map.apply {
-            addLayer(LTileLayer.createDefaultForOpenStreetMapTileServer(reg))
+//            addLayer(LTileLayer.createDefaultForOpenStreetMapTileServer(reg))
+            addLayer(LTileLayer(reg,"/tiles/{z}/{x}/{y}.png"))
             setView(LLatLng(reg, 55.7494, 37.6192), 13)
-            addLayer(LCircleMarker(reg, LLatLng(reg, 55.75, 37.62), LCircleMarkerOptions().withRadius(10)))
         }
         setId(MAP_ID)
     }

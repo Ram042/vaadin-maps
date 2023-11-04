@@ -1,5 +1,10 @@
 # Vaadin Gradle Skeleton Starter Spring Boot
 
+Скачать тайлы
+```shell
+wget -r -nH -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0" https://c.tile.openstreetmap.org/13/49{47..54}/25{58..64}.png
+```
+
 This project demos the possibility of having Vaadin project in npm+webpack mode using Gradle.
 Please see the [Starting a Vaadin project using Gradle](https://vaadin.com/docs/latest/guide/start/gradle) for the documentation.
 
